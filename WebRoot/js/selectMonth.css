@@ -1,0 +1,13 @@
+<style type="text/css">
+*{margin:0px; padding:0px; font-size:11px;}
+#parenDiv{position:absolute; z-index:999; width:800px; border:0px solid #c3c3c3; margin-top:-20px;}
+.div1{width:150px; height:0px; background:#ffffff;font-size:11px; margin:0px auto;}
+.div1 table{background:#ffffff; width:140px; border-collapse:collapse; border:1px solid #000000;}
+.div1 table td.th1{background:#8EDF20; height:26px;}
+.div1 table td.th1 button{width:45px; background:#8EDF20; text-align:center; border:0px;  height:24px;}
+.div1 table td.th2{background:#F2AC60; text-align:center; width:auto; font-size:13px;}
+.div1 table td.th3{background:#8EDF20; height:26px;}
+.div1 table td.th3 button{width:45px; background:#8EDF20; text-align:center; border:0px;  height:24px;}
+.div1 table td{background:#f0f0f0;}
+.div1 table td button{width:45px; background:#f0f0f0; text-align:center; border:0px;}
+</style>

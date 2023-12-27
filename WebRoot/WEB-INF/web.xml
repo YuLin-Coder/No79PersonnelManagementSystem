@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<welcome-file-list>
+		<welcome-file>/login.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+	<filter>
+		<filter-name>SetChartEncoding</filter-name>
+		<filter-class>com.util.EncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SetChartEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>
+			org.directwebremoting.servlet.DwrServlet
+		</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>activeReverseAjaxEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>
+				initApplicationScopeCreatorsAtStartup
+			</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>maxWaitAfterWrite</param-name>
+			<param-value>500</param-value>
+		</init-param>
+		<init-param>
+    <param-name>crossDomainSessionSecurity</param-name>
+    <param-value>false</param-value>
+   </init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>org</servlet-name>
+		<servlet-class>com.action.org_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>org</servlet-name>
+		<url-pattern>/org</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>yuangong</servlet-name>
+		<servlet-class>com.action.yuangong_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>yuangong</servlet-name>
+		<url-pattern>/yuangong</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>gonggao</servlet-name>
+		<servlet-class>com.action.gonggao_servlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>gonggao</servlet-name>
+		<url-pattern>/gonggao</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+    
+    
+    
+    <servlet>
+      <servlet-name>qingjia</servlet-name>
+      <servlet-class>com.action.qingjia_servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>qingjia</servlet-name>
+      <url-pattern>/qingjia</url-pattern>
+    </servlet-mapping>
+    
+    
+	  <servlet>
+	      <servlet-name>gongzi</servlet-name>
+	      <servlet-class>com.action.gongzi_servlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+	      <servlet-name>gongzi</servlet-name>
+	      <url-pattern>/gongzi</url-pattern>
+	  </servlet-mapping>
+	  
+	  
+	  
+	  
+	  <servlet>
+      <servlet-name>qiandao</servlet-name>
+      <servlet-class>com.action.qiandao_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>qiandao</servlet-name>
+      <url-pattern>/qiandao</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+      <servlet-name>qiantui</servlet-name>
+      <servlet-class>com.action.qiantui_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>qiantui</servlet-name>
+      <url-pattern>/qiantui</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+      <servlet-name>chuqin</servlet-name>
+      <servlet-class>com.action.chuqin_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>chuqin</servlet-name>
+      <url-pattern>/chuqin</url-pattern>
+  </servlet-mapping>
+</web-app>
+
